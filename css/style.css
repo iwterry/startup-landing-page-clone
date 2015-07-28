@@ -1,0 +1,8 @@
+/* Add background color to the body of the html page to see what has been covered. */
+body {
+	background-color: LightGray;
+}
+/* Add border around every div element to help see where such elements are located on the html page. */
+div {
+	border: 1px solid Chocolate; 
+}
