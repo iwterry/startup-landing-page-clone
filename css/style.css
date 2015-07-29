@@ -46,6 +46,19 @@ ul li{
 .nav-links {
 
 }
+/*********************************** First Section ********************************/
+.first-section {
+	background-image: url("images/first-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	width: 100%;
+	color: white;
+}
+
+button {
+	background-color: orange; 
+}
 
 /* Only used to see how navigation bar will work */
 .coffee-section {
