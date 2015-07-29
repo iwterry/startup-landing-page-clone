@@ -1,3 +1,8 @@
+/* Delete any padding and margin on all elements initially as a form of CSS reset */
+* {
+	margin: 0em 0em; 
+	padding: 0em 0em; 
+}
 /* Add background color to the body of the html page to see what has been covered. */
 body {
 	background-color: LightGray;
@@ -5,4 +10,45 @@ body {
 /* Add border around every div element to help see where such elements are located on the html page. */
 div {
 	border: 1px solid Chocolate; 
+}
+/***************************************** Navigation Bar **********************************************/
+/* 7/28/2015 @ 11:23pm -- Set up navigation bar, but unable to do it properly. Unable to position nav-links and nav-logo 
+							like in the example given.
+*/
+/* Set properties for navigation bar. */
+nav{ 
+	position: fixed; /* set the navigation bar so it does not move  when scrolling vertically */
+	top: 0em; /* set the navigation bar at the very top of the page */
+	width: 100%; /* set the navigation bar to spread the entire width of the page */
+	height: 4.5em; /* set the height of the navigation bar */
+	background-color: #FFFFFF; /* set background to white */
+	border: 1px solid green; /* help to visualize what is going on */ 
+	text-align: center; 
+
+}
+/* Set properties for Karma's logo. */
+img {
+	height:2.5em;
+	width: 1.9em;
+}
+/* Set properties for links on navigation bar so that they are all on the same line. */
+ul li{
+	display: inline-block;
+}
+/* Set Karma's logo and navigation links on the same line. */
+.nav-links, .nav-logo {
+	display: inline-block; 
+	
+}
+.nav-logo {
+
+}
+.nav-links {
+
+}
+
+/* Only used to see how navigation bar will work */
+.coffee-section {
+	height: 50em;
+	border: 1px dashed Chocolate;
 }
