@@ -47,21 +47,68 @@ ul li{
 
 }
 /*********************************** First Section ********************************/
+/* Status: 7/29/2015 @ 3:48pm -- Further improved that layout of the first section 
+		by adding a div element, among other things. However, the text needs to be style
+		according to the sample. 
+*/ 
 .first-section {
+	/* set background image of the .first-section */
 	background-image: url("images/first-background.jpg");
+	/* set the background image to not repeat */
 	background-repeat: no-repeat;
+	/* set the size of the background */ 
 	background-size: cover;
-	display: inline-block;
+	/* spread the width across the entire page */
 	width: 100%;
+	/* color the text white */ 
 	color: white;
 }
-
+.first-section div {
+	/* center this div element */
+	width: 50em;
+	margin-left: auto; 
+	margin-right: auto; 
+	/* center the text within this div elelemnt */
+	text-align: center; 
+	/* stretch this div element vertically so that it is vertically centered;
+		the length .first-section's background will increase */
+	padding-top: 15em;
+	padding-bottom: 15em;
+}
 button {
 	background-color: orange; 
 }
 
-/* Only used to see how navigation bar will work */
-.coffee-section {
-	height: 50em;
-	border: 1px dashed Chocolate;
+/********************************** Second Section **********************************/
+/* Status: 7/29/2015 @ 2:53pm -- Add second section, but the configuration of the layout 
+			needs to be adjusted better along with making modications to the text. 
+*/
+.second-section {
+	/* center .second-section by setting its width, margin-left, and margin-right properties */ 
+	width: 58em;
+	margin-left: auto;
+	margin-right: auto;
+	/* center all text within .second-section */ 
+	text-align: center; 
+	/* add border to see a visual inspection */
+	border: 1px dashed blue; 
 }
+
+.devices-section, 
+.coffee-section, 
+.mobile-section {
+	/* add all on the same line */
+	display: inline-block; 
+	/* set width of the subsections */
+	width: 15em; 
+	/* create some distance */
+	padding: 2em; 
+}
+
+/* set height and width of the image icons in .second-section */ 
+.second-section img {
+	height: 7em;
+	width: 7em; 
+}
+
+
