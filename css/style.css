@@ -12,9 +12,10 @@ div {
 	border: 1px solid Chocolate; 
 }
 /***************************************** Navigation Bar **********************************************/
-/* 7/28/2015 @ 11:23pm -- Set up navigation bar, but unable to do it properly. Unable to position nav-links and nav-logo 
-							like in the example given.
-*/
+/* Status: 7/30/2015 @ 1:54am -- Improved the appearance of the navigation links, but unable
+		to figure out how to style the navigation bar to have look and behavior like the sample 
+*/		
+
 /* Set properties for navigation bar. */
 nav{ 
 	position: fixed; /* set the navigation bar so it does not move  when scrolling vertically */
@@ -22,9 +23,8 @@ nav{
 	width: 100%; /* set the navigation bar to spread the entire width of the page */
 	height: 4.5em; /* set the height of the navigation bar */
 	background-color: #FFFFFF; /* set background to white */
-	border: 1px solid green; /* help to visualize what is going on */ 
+	outline: 1px solid green; /* help to visualize what is going on */ 
 	text-align: center; 
-
 }
 /* Set properties for Karma's logo. */
 img {
@@ -34,22 +34,39 @@ img {
 /* Set properties for links on navigation bar so that they are all on the same line. */
 ul li{
 	display: inline-block;
+	margin: 0 0.7em; 
 }
+a {
+	text-decoration: none; 
+	color: #868686;
+	font-family: Arial, sans-serif; 
+	font-size: 1em; 
+	font-weight: bold; 
+	opacity: 0.8;
+}
+/* overide the previous selector so that the first link is of different color */ 
+a.nav-links-color {color: #333333; }
+
+.nav-links li a:hover {opacity: 1}
 /* Set Karma's logo and navigation links on the same line. */
 .nav-links, .nav-logo {
 	display: inline-block; 
 	
 }
-.nav-logo {
 
+.nav-logo {
+	float: left;
 }
 .nav-links {
-
+	float: right;
+	padding: 1.7em 0%; 
+	outline: 1px dotted black; /* for visual purposes */
+	border: none; /* to negate the fact that every div is set to have a border */
 }
+
 /*********************************** First Section ********************************/
-/* Status: 7/29/2015 @ 3:48pm -- Further improved that layout of the first section 
-		by adding a div element, among other things. However, the text needs to be style
-		according to the sample. 
+/* Status: 7/30/2015 @ 2:56am -- Improved layout of the button, but layout of background image
+		and the text need to be improved. 
 */ 
 .first-section {
 	/* set background image of the .first-section */
@@ -74,9 +91,21 @@ ul li{
 		the length .first-section's background will increase */
 	padding-top: 15em;
 	padding-bottom: 15em;
+	outline: 1px dotted orange; 
+	border: none; /* used because div are set to have border */
 }
 button {
-	background-color: orange; 
+	background-color: #F55E21; 
+	border-radius: 0.25em;
+	border: none; 
+	padding: 0.8em 1.7em; 
+	font-family: Arial, sans-serif; 
+	font-size: 1.1em; 
+	margin-top: 2em; 
+}
+
+button:hover {
+	background-color: #CE4007; 
 }
 
 /********************************** Second Section **********************************/
