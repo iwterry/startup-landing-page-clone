@@ -7,61 +7,62 @@
 body {
 	background-color: LightGray;
 }
-/* Add border around every div element to help see where such elements are located on the html page. */
+/* Add outline around every div element to help see where such elements are located on the html page. */
 div {
-	border: 1px solid Chocolate; 
+	outline: 1px dotted Chocolate;  
 }
 /***************************************** Navigation Bar **********************************************/
-/* Status: 7/30/2015 @ 1:54am -- Improved the appearance of the navigation links, but unable
-		to figure out how to style the navigation bar to have look and behavior like the sample 
+/* Status: 7/30/2015 @ 1:13pm -- Use float property to better align the navigation bar, but can simulate the 
+		behavior needed when changing the width of the browser. 
 */		
 
 /* Set properties for navigation bar. */
 nav{ 
 	position: fixed; /* set the navigation bar so it does not move  when scrolling vertically */
 	top: 0em; /* set the navigation bar at the very top of the page */
-	width: 100%; /* set the navigation bar to spread the entire width of the page */
+	width: 100%; /* set the navigation bar to spread a certain percentage */
 	height: 4.5em; /* set the height of the navigation bar */
 	background-color: #FFFFFF; /* set background to white */
-	outline: 1px solid green; /* help to visualize what is going on */ 
 	text-align: center; 
+	outline: 1px solid green; /* help to visualize what is going on */ 
 }
 /* Set properties for Karma's logo. */
 img {
-	height:2.5em;
-	width: 1.9em;
+	height:2.7em;
+	width: 1.6em;
+	margin: 0em 1em; 
 }
 /* Set properties for links on navigation bar so that they are all on the same line. */
-ul li{
-	display: inline-block;
-	margin: 0 0.7em; 
-}
+ul li{display: inline-block;}
+/* Set properties of the "a" elements. */ 
 a {
-	text-decoration: none; 
-	color: #868686;
+	text-decoration: none; /* get rid of the underlining */
+	color: #868686; /* a orange-like color */ 
 	font-family: Arial, sans-serif; 
 	font-size: 1em; 
 	font-weight: bold; 
 	opacity: 0.8;
+	margin: 0 0.7em; /* get some horizontal space between the "a" elements */
 }
-/* overide the previous selector so that the first link is of different color */ 
+/* overide the previous selector so that the first "a" element is of different color */ 
 a.nav-links-color {color: #333333; }
-
+/* Set all "a" elements to change their opacity when hovered upon. */
 .nav-links li a:hover {opacity: 1}
-/* Set Karma's logo and navigation links on the same line. */
-.nav-links, .nav-logo {
-	display: inline-block; 
-	
-}
-
+/* Set Karma's logo and navigation links on the same line and vertically centered on the navigation bar*/
 .nav-logo {
 	float: left;
+	padding: 0.8em 0em;
 }
 .nav-links {
 	float: right;
-	padding: 1.7em 0%; 
-	outline: 1px dotted black; /* for visual purposes */
-	border: none; /* to negate the fact that every div is set to have a border */
+	padding: 1.7em 0em; 
+}
+div.nav-container {
+	width: 60%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	min-width: 38em; 
+	outline: 1px solid black; 
 }
 
 /*********************************** First Section ********************************/
