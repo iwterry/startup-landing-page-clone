@@ -5,7 +5,7 @@
 }
 /* Add background color to the body of the html page to see what has been covered. */
 body {
-	background-color: LightGray;
+	/*background-color: LightGray;*/
 }
 /* Add outline around every div element to help see where such elements are located on the html page. */
 div {
@@ -140,5 +140,38 @@ button:hover {
 	height: 7em;
 	width: 7em; 
 }
-
+/********************************************* Footer  *************************************/
+/* Status: 7/31/2015 @ 2:02am -- Might need to touch up the footer a little bit more, but it is 
+		basically complete. 
+*/
+footer {
+	/* align icons and texts to be in the center of the page */
+	text-align: center; 
+	padding-top: 1em; 
+	/* create distance from bottom of footer to the webpage */
+	margin-bottom: 9em; 
+}
+footer p:nth-child(3) { /* selecting the 2nd p element */
+	color: #ABABAB;
+	font-family: "Arial Narrow", sans-serif; 
+}
+.icons-social { 
+	/* place vertical space between the the social media icons and the paragraph elements */
+	padding: 1em 0em; 
+}
+/* shape the social media icons */
+.icons-social i {
+	width: 1.1em;
+	padding: 0.5em 0.5em 0.7em 0.5em;
+	border: 1px solid #F3F0F0; 
+	margin: 0em 0.2em;
+	border-radius: 100% / 100%;
+}
+/* give color to the social media icons */
+.icon-color1 {
+	color: #79BAF7; 
+}
+.icon-color2 {
+	color: #4343A9; 
+}
 
