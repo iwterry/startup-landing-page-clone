@@ -1,21 +1,8 @@
-/* Delete any padding and margin on all elements initially as a form of CSS reset */
-* {
-	margin: 0em 0em; 
-	padding: 0em 0em; 
-}
-/* Add background color to the body of the html page to see what has been covered. */
-body {
-	/*background-color: LightGray;*/
-}
-/* Add outline around every div element to help see where such elements are located on the html page. */
-div {
-	outline: 1px dotted Chocolate;  
-}
-/***************************************** Navigation Bar **********************************************/
-/* Status: 7/30/2015 @ 1:13pm -- Use float property to better align the navigation bar, but can simulate the 
-		behavior needed when changing the width of the browser. 
-*/		
+/* delete margins and paddings from any element and set the body font family */
+* {margin: 0em 0em; padding: 0em 0em;} 
+body {font-family: Arial, sans-serif;}
 
+/***************************************** Navigation Bar **********************************************/
 /* Set properties for navigation bar. */
 nav{ 
 	position: fixed; /* set the navigation bar so it does not move  when scrolling vertically */
@@ -24,136 +11,124 @@ nav{
 	height: 4.5em; /* set the height of the navigation bar */
 	background-color: #FFFFFF; /* set background to white */
 	text-align: center; 
-	outline: 1px solid green; /* help to visualize what is going on */ 
-}
-/* Set properties for Karma's logo. */
-img {
-	height:2.7em;
-	width: 1.6em;
-	margin: 0em 1em; 
-}
-/* Set properties for links on navigation bar so that they are all on the same line. */
-ul li{display: inline-block;}
-/* Set properties of the "a" elements. */ 
-a {
-	text-decoration: none; /* get rid of the underlining */
-	color: #868686; /* a orange-like color */ 
-	font-family: Arial, sans-serif; 
-	font-size: 1em; 
-	font-weight: bold; 
-	opacity: 0.8;
-	margin: 0 0.7em; /* get some horizontal space between the "a" elements */
-}
-/* overide the previous selector so that the first "a" element is of different color */ 
-a.nav-links-color {color: #333333; }
-/* Set all "a" elements to change their opacity when hovered upon. */
-.nav-links li a:hover {opacity: 1}
-/* Set Karma's logo and navigation links on the same line and vertically centered on the navigation bar*/
-.nav-logo {
-	float: left;
-	padding: 0.8em 0em;
-}
-.nav-links {
-	float: right;
-	padding: 1.7em 0em; 
+	border-bottom: 1px solid #DEDEDE; /* add a light grayish border to the bottom */
+	z-index: 10; /* ensure the that other elements don't cover up navigation bar */ 
 }
 div.nav-container {
 	width: 60%; 
 	margin-left: auto; 
 	margin-right: auto; 
 	min-width: 38em; 
-	outline: 1px solid black; 
 }
+/* Set properties for Karma's logo. */
+.nav-logo {
+	float: left;
+	padding: 0.8em 0em;
+}
+.nav-logo img {
+	height:2.7em;
+	width: 1.6em;
+	margin: 0em 1em; 
+}
+/* Set properties for navigation links. */
+.nav-links {
+	float: right;
+	padding: 1.7em 0em; 
+}
+/* Set properties for links on navigation bar so that they are all on the same line. */
+ul li{display: inline-block;}
+/* Set properties of the "a" elements. */ 
+a {
+	text-decoration: none; /* get rid of the underlining */
+	color: #868686; /* a light gray color */ 
+	font-weight: bold; 
+	font-size: 1em;  
+	opacity: 0.8;
+	margin: 0 0.7em; /* get some horizontal space between the "a" elements */
+}
+/* overide the previous selector so that the first "a" element is of different color */ 
+a.nav-links-color {color: #232222; }
+/* Set all "a" elements to change their opacity when hovered upon. */
+.nav-links li a:hover {opacity: 1}
+/* Set Karma's logo and navigation links on the same line and vertically centered on the navigation bar*/
+
 
 /*********************************** First Section ********************************/
-/* Status: 7/30/2015 @ 2:56am -- Improved layout of the button, but layout of background image
-		and the text need to be improved. 
-*/ 
 .first-section {
-	/* set background image of the .first-section */
-	background-image: url("images/first-background.jpg");
-	/* set the background image to not repeat */
-	background-repeat: no-repeat;
-	/* set the size of the background */ 
-	background-size: cover;
-	/* spread the width across the entire page */
+	/* set the height and width of this class */
 	width: 100%;
-	/* color the text white */ 
-	color: white;
+	height: 45em; 	
+	/* Set the background image and have it scale the area created by height and width; in addition,
+		the background image should not repeat. */
+	background-image: url("images/first-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center; /* center the horizontal and vertical positions of the background image */
 }
-.first-section div {
-	/* center this div element */
-	width: 50em;
-	margin-left: auto; 
-	margin-right: auto; 
-	/* center the text within this div elelemnt */
-	text-align: center; 
-	/* stretch this div element vertically so that it is vertically centered;
-		the length .first-section's background will increase */
-	padding-top: 15em;
-	padding-bottom: 15em;
-	outline: 1px dotted orange; 
-	border: none; /* used because div are set to have border */
+.first-section-container {
+	padding-top: 17em; /* push the text and buttons further downward*/
+	text-align: center; /* center all text and inline elements */
+	min-width: 30em; /* keep width from becoming too small and squeezing the texts */
+	color: white; /* color all text white */ 
 }
+/* styling the texts that lies on the background image */
+.first-section p:first-child{font-size: 3em; }
+.first-section p:nth-child(2){font-size: 1.5em;}
+.first-section p {line-height: 1.5em;}
+/* give shape, color, and spacing to the button */ 
 button {
-	background-color: #F55E21; 
-	border-radius: 0.25em;
-	border: none; 
-	padding: 0.8em 1.7em; 
-	font-family: Arial, sans-serif; 
 	font-size: 1.1em; 
-	margin-top: 2em; 
+	background-color: #F56830; /* an orange-like color */
+	border-radius: 0.25em; /* round the colors slightly */ 
+	border: none; 
+	padding: 0.9em 1.8em; 
+	margin-top: 1em; 
 }
-
+/* change color of button when hovered on */ 
 button:hover {
 	background-color: #CE4007; 
 }
 
+
 /********************************** Second Section **********************************/
-/* Status: 7/29/2015 @ 2:53pm -- Add second section, but the configuration of the layout 
-			needs to be adjusted better along with making modications to the text. 
-*/
 .second-section {
-	/* center .second-section by setting its width, margin-left, and margin-right properties */ 
-	width: 58em;
-	margin-left: auto;
-	margin-right: auto;
+	/* center .second-section and place vertical space between the footer and the background of the .first-section*/ 
+	width: 60%;
+	margin: 0em auto; 	
+	padding: 9em 0em; 
+	min-width: 34em; 
 	/* center all text within .second-section */ 
 	text-align: center; 
-	/* add border to see a visual inspection */
-	border: 1px dashed blue; 
+	/* add bottom solid border */
+	border-bottom: 1px solid #F3F0F0; 
 }
-
 .devices-section, 
 .coffee-section, 
 .mobile-section {
 	/* add all on the same line */
 	display: inline-block; 
 	/* set width of the subsections */
-	width: 15em; 
-	/* create some distance */
-	padding: 2em; 
+	width: 32.5%; 
+	vertical-align: top; /* set to be at the top of .second-section */
 }
-
-/* set height and width of the image icons in .second-section */ 
 .second-section img {
-	height: 7em;
-	width: 7em; 
+	height: 7em; /* set height of image icons */ 
+	width: 7em; /* set width of image icons */
+	margin-top: 3em; /* place distance between text above the images and the images themselves */
+	margin-bottom: 2em; /* place distance between image icons and text under each image */
 }
+/* set font sizes for the paragraph elements in .second-section */ 
+.second-section-font-large {font-size: 2.5em;}
+.second-section-font-small {font-size: 1.5em;}
+
+
 /********************************************* Footer  *************************************/
-/* Status: 7/31/2015 @ 2:02am -- Might need to touch up the footer a little bit more, but it is 
-		basically complete. 
-*/
 footer {
 	/* align icons and texts to be in the center of the page */
 	text-align: center; 
 	padding-top: 1em; 
 	/* create distance from bottom of footer to the webpage */
 	margin-bottom: 9em; 
-}
-footer p:nth-child(3) { /* selecting the 2nd p element */
-	color: #ABABAB;
-	font-family: "Arial Narrow", sans-serif; 
 }
 .icons-social { 
 	/* place vertical space between the the social media icons and the paragraph elements */
@@ -164,14 +139,14 @@ footer p:nth-child(3) { /* selecting the 2nd p element */
 	width: 1.1em;
 	padding: 0.5em 0.5em 0.7em 0.5em;
 	border: 1px solid #F3F0F0; 
-	margin: 0em 0.2em;
+	margin: 0em 0.2em; /* place some space between the icons */
 	border-radius: 100% / 100%;
 }
 /* give color to the social media icons */
-.icon-color1 {
-	color: #79BAF7; 
+.icon-color1 {color: #79BAF7; }
+.icon-color2 {color: #4343A9; }
+/* select the 2nd p element in the footer and change its color and font family */
+footer p:nth-child(3) { 
+	color: #ABABAB;
+	font-family: "Arial Narrow", sans-serif; 
 }
-.icon-color2 {
-	color: #4343A9; 
-}
-
