@@ -60,7 +60,7 @@ a.nav-links-color {color: #232222; }
 	height: 45em; 	
 	/* Set the background image and have it scale the area created by height and width; in addition,
 		the background image should not repeat. */
-	background-image: url("images/first-background.jpg");
+	background-image: url("./images/first-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center; /* center the horizontal and vertical positions of the background image */
