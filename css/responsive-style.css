@@ -1,0 +1,223 @@
+body {
+	font-family: Arial, sans-serif; 
+	margin: 0em; 
+	padding: 0em;
+}
+
+/*#################################### Navigation Bar ####################################################*/
+/* Set properties for navigation bar. */
+nav{ 
+	position: fixed; /* set the navigation bar so it does not move  when scrolling vertically */
+	top: 0em; /* set the navigation bar at the very top of the page */
+	width: 100%; /* set the navigation bar to spread a certain percentage */
+	height: 5em; /* set the height of the navigation bar */
+	background-color: #FFFFFF; /* set background to white */
+	border-bottom: 1px solid #DEDEDE; /* add a light grayish border to the bottom */
+	z-index: 10; /* ensure the that other elements don't cover up navigation bar */ 
+}
+
+div.nav-container {
+	width: 60%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	min-width: 38em; 
+}
+
+/* Set properties for Karma's logo. */
+.nav-logo {
+	float: left;
+	padding: 0.8em 0em; 
+}
+.nav-logo img {
+	height:3em;
+	width: 1.8em;
+	margin: 0em 1em; 
+}
+
+/* Set properties for the navigation links. */
+.option1 { /* horizontal menu bar */ 
+	float: right;
+	padding: 1.7em 0em; 
+}
+.option2 { /* drop-down menu bar */ 
+	display: none; /* so drop-down menu bar won't display automatically */ 
+	float: right; 
+} 
+
+/* change width of navigation bar when width of screen gets smaller */ 
+@media only screen and (min-width: 811px) and (max-width: 1000px)  {
+	div.nav-container {
+		width: 85%; 
+		min-width: 40em; 
+	}
+}
+/* display drop-down menu button for smaller size screens  instead of the horizontal list of menu */
+@media only screen and (max-width: 810px) {
+	.option1 {
+		display: none; 
+	}
+	.option2 {
+		display: block; 
+		float: right; 
+	}
+	div.nav-container {
+		width: 50%; /* to ensure that smaller mobile phones can see all option on the menu */
+		min-width: 0em; 
+	}
+}
+
+/* Set properties for links on navigation bar so that they are all on the same line. */
+div.nav-container li{display: inline-block;}
+/* Set properties of the "a" elements. */ 
+div.nav-container a {
+	text-decoration: none; /* get rid of the underlining */
+	color: #868686; /* a light gray color */ 
+	font-weight: bold; 
+	font-size: 1.2em;  
+	opacity: 0.8;
+	margin: 0 0.7em; /* get some horizontal space between the "a" elements */
+}
+/* overide the previous selector so that the first "a" element is of different color */ 
+div.nav-container a.nav-links-color {color: #232222; }
+/* Set all "a" elements to change their opacity when hovered upon. */
+div.nav-container a:hover {opacity: 1; }
+
+
+
+/*############################################# first section ########################################*/
+.first-section {
+	/* set the height and width of this class */
+	width: 100%;
+	height: 50em; 	
+	/* Set the background image and have it scale the area created by height and width; in addition,
+		the background image should not repeat. */
+	background-image: url("./images/first-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center; /* center the horizontal and vertical positions of the background image */
+}
+
+div.first-section-container {
+	padding-top: 18em; /* push the text and buttons further downward*/
+	text-align: center; /* center all text and inline elements */
+	color: white; /* color all text white */ 
+	width: 80%;
+	margin: 0em auto; 
+}
+
+/* make background and text more suitable for smaller devices */
+@media only screen and (max-width: 810px) {
+	.first-section {
+		height: 30em; /* smaller background height for smaller screens */
+		background-position: right center; /* place more emphasis on the devices in the background */
+	}
+	div.first-section-container {
+		font-weight: bold; /* make it easier to see see text on the background */
+		text-shadow: 3px 3px black; /* help to see text on the background */
+		padding-top: 7em; /* reducing previous length since using smaller screen size */ 
+	}
+}
+
+/* styling the texts that lies on the background image */
+.first-section p:first-child{font-size: 3.3em; }
+.first-section p:nth-child(2){font-size: 1.7em;}
+.first-section p {line-height: 1.2em;}
+
+/* give shape, color, and spacing to the button */ 
+button {
+	font-size: 1.1em; 
+	background-color: #F56830; /* an orange-like color */
+	border-radius: 0.25em; /* round the colors slightly */ 
+	border: none; 
+	padding: 0.9em 1.8em; 
+	margin-top: 1em; 
+}
+/* change color of button when hovered on */ 
+button:hover {
+	background-color: #CE4007; 
+}
+
+
+/*###################################### second section #####################################*/
+.second-section {
+	/* center .second-section and place vertical space between the footer and the background of the .first-section*/ 
+	width: 60%;
+	margin: 0em auto; 	
+	padding: 9em 0em; 
+	/* center all text within .second-section */ 
+	text-align: center; 
+	/* add bottom solid border */
+	border-bottom: 1px solid #F3F0F0; 
+}
+
+.second-section-font-large {font-size: 2.5em;} /* for first p element */
+
+.devices-section, 
+.coffee-section, 
+.mobile-section {
+	/* add all on the same line */
+	display: inline-block; 
+	/* set width of the subsections */
+	width: 32.5%; 
+	vertical-align: top; /* set to be at the top of .second-section */
+}
+
+/* setting properties for images in the second section */
+.second-section img {
+	height: 7em; /* set height of image icons */ 
+	width: 7em; /* set width of image icons */
+	margin-top: 3em; /* place distance between text above the images and the images themselves */
+	margin-bottom: 2em; /* place distance between image icons and text under each image */
+}
+/* set font sizes for the paragraph elements in .second-section */ 
+.second-section-font-small {font-size: 1.5em;}
+/* change horizontal icons to vertical  for smaller screen sizes */
+@media only screen and (max-width: 810px) {
+	.devices-section, 
+	.coffee-section, 
+	.mobile-section  {
+		//display: block;
+		/* set width of the subsections */
+		width: 100%; 
+	}
+	.second-section {
+		width: 80%;
+	}
+}
+
+
+/*############################################### footer  #########################################*/
+footer {
+	/* align icons and texts to be in the center of the page */
+	text-align: center; 
+	margin-top: 1.1em; 
+	/* create distance from bottom of footer to the webpage */
+	margin-bottom: 9em; 
+}
+
+footer p {
+	font-size: 1.2em; 
+	margin:0em;
+}
+
+.icons-social { 
+	/* place vertical space between the the social media icons and the paragraph elements */
+	padding: 1em 0em; 
+}
+/* shape the social media icons */
+.icons-social i {
+	width: 2.6em;
+	padding: 0.5em 0.5em 0.9em 0.5em;
+	border: 1px solid #F3F0F0; 
+	margin: 0.2em 0.6em; /* place some space between the icons */
+	border-radius: 100% / 100%;
+}
+/* give color to the social media icons */
+.icon-color1 {color: #79BAF7; }
+.icon-color2 {color: #4343A9; }
+
+footer p:nth-child(3) { /* second p element in the footer */
+	color: #ABABAB;
+	font-family: "Arial Narrow", sans-serif; 
+	font-size: 1.1em; 
+}
