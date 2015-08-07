@@ -1,5 +1,5 @@
 /* delete margins and paddings from any element and set the body font family */
-* {margin: 0em 0em; padding: 0em 0em;} 
+* {margin: 0em; padding: 0em;} 
 body {font-family: Arial, sans-serif;}
 
 /***************************************** Navigation Bar **********************************************/
