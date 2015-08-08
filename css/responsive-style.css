@@ -92,10 +92,6 @@ div.nav-container a:hover {opacity: 1; }
 }
 
 
-
-
-
-
 /*############################################# first section ########################################*/
 .first-section {
 	/* set the height and width of this class */
@@ -194,7 +190,7 @@ button:hover {
 	}
 	.second-section {
 		width: 80%;
-		padding: 5em auto; /* reduce vertical size of the second section for smaller screens */
+		padding: 6em 0em; /* reduce vertical size of the second section for smaller screens */
 	}
 }
 
