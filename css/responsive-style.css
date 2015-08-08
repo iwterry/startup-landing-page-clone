@@ -20,7 +20,7 @@ div.nav-container {
 	width: 60%; 
 	margin-left: auto; 
 	margin-right: auto; 
-	min-width: 38em; 
+	min-width: 45em; 
 }
 
 /* Set properties for Karma's logo. */
@@ -62,7 +62,7 @@ div.nav-container {
 	}
 	div.nav-container {
 		width: 50%; /* to ensure that smaller mobile phones can see all option on the menu */
-		min-width: 0em; 
+		min-width: 12em; 
 	}
 }
 
