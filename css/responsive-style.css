@@ -62,7 +62,7 @@ div.nav-container {
 	}
 	div.nav-container {
 		width: 50%; /* to ensure that smaller mobile phones can see all option on the menu */
-		min-width: 12em; 
+		min-width: 10em; 
 	}
 }
 
@@ -182,6 +182,7 @@ button:hover {
 	}
 	.second-section {
 		width: 80%;
+		padding: 5em auto; /* reduce vertical size of the second section for smaller screens */
 	}
 }
 
@@ -220,4 +221,8 @@ footer p:nth-child(3) { /* second p element in the footer */
 	color: #ABABAB;
 	font-family: "Arial Narrow", sans-serif; 
 	font-size: 1.1em; 
+}
+
+@media only screen and (max-width: 810px) {
+	footer { margin-bottom: 2em;} /* reduce vertical height between the footer and the bottom of webpage */ 
 }
