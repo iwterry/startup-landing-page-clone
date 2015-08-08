@@ -44,6 +44,23 @@ div.nav-container {
 	float: right; 
 } 
 
+/* Set properties for links on navigation bar so that they are all on the same line. */
+div.nav-container li{display: inline-block;}
+/* Set properties of the "a" elements. */ 
+div.nav-container a {
+	text-decoration: none; /* get rid of the underlining */
+	color: #868686; /* a light gray color */ 
+	font-weight: bold; 
+	font-size: 1.2em;  
+	opacity: 0.8;
+	margin: 0 0.7em; /* get some horizontal space between the "a" elements */
+}
+/* overide the previous selector so that the first "a" element is of different color */ 
+div.nav-container a.nav-links-color {color: #232222; }
+/* Set all "a" elements to change their opacity when hovered upon. */
+div.nav-container a:hover {opacity: 1; }
+
+
 /* change width of navigation bar when width of screen gets smaller */ 
 @media only screen and (min-width: 811px) and (max-width: 1000px)  {
 	div.nav-container {
@@ -60,27 +77,22 @@ div.nav-container {
 		display: block; 
 		float: right; 
 	}
+	/* to ensure that smaller mobile phones can see all option on the menu */
 	div.nav-container {
-		width: 50%; /* to ensure that smaller mobile phones can see all option on the menu */
+		width: 50%; 
 		min-width: 10em; 
 	}
+	div.nav-container a { 
+		padding-left: 0.5em;
+		padding-right: 0.5em; 
+		margin-left: 0.5em; 
+		margin-right: 0.5em; 
+	}
+	div.nav-container li {display: block;} /* keep links vertical */
 }
 
-/* Set properties for links on navigation bar so that they are all on the same line. */
-div.nav-container li{display: inline-block;}
-/* Set properties of the "a" elements. */ 
-div.nav-container a {
-	text-decoration: none; /* get rid of the underlining */
-	color: #868686; /* a light gray color */ 
-	font-weight: bold; 
-	font-size: 1.2em;  
-	opacity: 0.8;
-	margin: 0 0.7em; /* get some horizontal space between the "a" elements */
-}
-/* overide the previous selector so that the first "a" element is of different color */ 
-div.nav-container a.nav-links-color {color: #232222; }
-/* Set all "a" elements to change their opacity when hovered upon. */
-div.nav-container a:hover {opacity: 1; }
+
+
 
 
 
