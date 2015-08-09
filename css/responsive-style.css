@@ -28,11 +28,7 @@ div.nav-container {
 	float: left;
 	padding: 0.8em 0em; 
 }
-.nav-logo img {
-	height:3em;
-	width: 1.8em;
-	margin: 0em 1em; 
-}
+.nav-logo img {margin: 0em 1em; }
 
 /* Set properties for the navigation links. */
 .option1 { /* horizontal menu bar */ 
@@ -172,8 +168,6 @@ button:hover {
 
 /* setting properties for images in the second section */
 .second-section img {
-	height: 7em; /* set height of image icons */ 
-	width: 7em; /* set width of image icons */
 	margin-top: 3em; /* place distance between text above the images and the images themselves */
 	margin-bottom: 2em; /* place distance between image icons and text under each image */
 }
